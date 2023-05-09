@@ -1,0 +1,100 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+ХАУС | Покупка билета
+{% endblock %}
+
+{% block content %}
+<section class="buy__page">
+    <div class="container__buy">
+        <div class="buy__header__item">
+            <div class="buy__header">
+                Купить билет
+            </div>
+        </div>
+        <div class="buy__item">
+            <div class="buy__header__2">
+                Session_Completed 25.01 20:00
+            </div>
+            <div class="buy__imput__block">
+                <div class="buy__imput__block__name">
+                    <div class="buy__imput__block__text">
+                        ФИО*
+                    </div>
+                    <input class="buy__imput__block__input__large" type="text" id="name" name="name" placeholder="Иванов Владимир Петрович" aria-label="Иванов Владимир Петрович" required minlength="1" maxlength="255">
+                </div>
+                <div class="buy__imput__block__mail">
+                    <div class="buy__imput__block__text">
+                        E-mail*
+                    </div>
+                    <input class="buy__imput__block__input__large" type="email" id="name" name="name" placeholder="example@exmail.com" aria-label="example@exmail.com" required minlength="1" maxlength="255">
+                </div>
+                <div class="buy__imput__block__phone">
+                    <div class="buy__imput__block__text">
+                        Телефон*
+                    </div>
+                    <input class="buy__imput__block__input__small" type="tel" id="name" name="name" placeholder="+7(900)000 00 00" aria-label="+7(900)000 00 00">
+                    <div class="buy__imput__block__text__2">
+                        Надоедливых рассылок не будет, обещаем
+                    </div>
+                </div>
+                <div class="buy__imput__block__promo">
+                    <div class="buy__imput__block__text">
+                        Промокод
+                    </div>
+                    <input class="buy__imput__block__input__small" type="text" id="name" name="name" placeholder="XMPL20" aria-label="XMPL20">
+                </div>
+            </div>
+            <div class="buy__submit__block">
+                <div class="buy__submit__block__price">
+                    2500₽
+                </div>
+                <button class="buyt-btn" type="submit" id="buy" name="buy" style="margin: 0 18px; cursor: pointer;">Оплатить</button>
+                <div class="buy__submit__block__text">
+                    <p>Нажимая кнопку “Оплатить”, вы даете <a href="">согласие на обработку персональных данных</a>
+                        и соглашаетесь с
+                        <a href="">правилами проведения мероприятия</a> и даете согласие на рассылку SMS оповещений.
+                    </p>
+                </div>
+            </div>
+            <div class="buy__alert__banner">
+                <img src="{% static 'img/alert.png' %}" alt="">
+            </div>
+            <div class="buy__ticket__main">
+                <div class="buy__our__tickets__block__left">
+                    <div class="buy__our__tickets__block__header">
+                        Session_Completed
+                    </div>
+                    <div class="buy__our__tickets__block__date">
+                        25-26 ЯНВАРЯ, 20:00
+                    </div>
+                    <a href="https://yandex.ru/maps/-/CCUZaHqJXB" target="_blank" class="buy__our__tickets__block__place" tabindex="0">
+                        Варшавское ш., 26 строение 12
+                    </a>
+                    <div class="buy__our__tickets__block__buy__btn__block">
+                        <div class="buy__our__tickets__block__ticket">
+                            <div class="buy__our__tickets__block__ticket__age">+18</div>
+                            <div class="buy__our__tickets__block__ticket__price">2500₽</div>
+                            <div class="buy__our__tickets__block__ticket__available">
+                                <div class="buy__our__tickets__block__ticket__available__text">
+                                    <div class="buy__our__tickets__block__ticket__available__text__main">
+                                        Осталось:
+                                    </div>
+                                    <div id="bar__status" class="buy__our__tickets__block__ticket__available__text__int" value="">
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                                <progress id="bar" value="1" max="120"><span>0</span>%</progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buy__alert__text">
+                *Поля обязательные для заполнения
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

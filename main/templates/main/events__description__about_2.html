@@ -1,0 +1,16 @@
+{% load static %}
+
+
+{% if event_2_about %}
+    {% for link in event_2_about %}
+        {% if link != '0' %}
+            <div class="events__description__info__about">
+                <div class="events__description__info__smile">
+                    <img src="{% static 'img/monster.png' %}" alt="">
+                </div>
+                <div class="events__description__info__text">{{ link }}</div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
